@@ -6,13 +6,13 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/10/26 16:34:02 by het-tale         ###   ########.fr        #
+#    Updated: 2022/11/03 22:25:01 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    =    megaphone
+NAME    =    phone
 
-SRCS    =    megaphone.cpp
+SRCS    =    *.cpp
 
 OBJCT    =    ${SRCS:.cpp=.o}
 
