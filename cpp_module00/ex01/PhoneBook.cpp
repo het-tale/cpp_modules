@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 16:36:35 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/04 00:07:29 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/03 22:58:42 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/03 23:06:41 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
-class	PhoneBook
+Contact	PhoneBook::getContacts(int i)
 {
-	private:
-		Contact contacts[8];
-	public:
-		Contact	getContacts(int i);
-		void	setContacts(Contact contact, int i);
-};
+	return (contacts[i]);
+}
+
+void	PhoneBook::setContacts(Contact contact, int i)
+{
+	contacts[i] = contact;
+}

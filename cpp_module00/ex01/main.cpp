@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:46:15 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/03 22:23:36 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/04 00:07:25 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,43 @@ void	check_size(std::string str)
 void	display_contacts(PhoneBook phone_book)
 {
 	int	i;
+	int n;
 
 	i = -1;
 	std::cout << std::setw(10) << "index" << "|" << "first name" << "|";
 	std::cout << std::setw(10) << "last name" << "|" << std::setw(10) << "nickname" << "\n";
 	while (++i < 8)
 	{
-		if (phone_book.contacts[i].getFirst().empty())
+		if (phone_book.getContacts(i).getFirst().empty())
 			break ;
 		std::cout << std::setw(10) << i << "|";
-		check_size(phone_book.contacts[i].getFirst());
+		check_size(phone_book.getContacts(i).getFirst());
 		std::cout << "|";
-		check_size(phone_book.contacts[i].getLast());
+		check_size(phone_book.getContacts(i).getLast());
 		std::cout << "|";
-		check_size(phone_book.contacts[i].getNick());
+		check_size(phone_book.getContacts(i).getNick());
 		std::cout << "\n";
 	}
+	std::cout << "Enter Your Index\n";
+	std::cin >> n;
+	i = -1;
+	if (n > 8 || n < 0)
+		std::cout << "Invalid index!!!\n";
+	else
+	{
+		while (++i < 8)
+		{
+			if (n == i)
+			{
+				std::cout << "First name: " << phone_book.getContacts(i).getFirst() << "\n";
+				std::cout << "Last name: " << phone_book.getContacts(i).getLast() << "\n";
+				std::cout << "Nickname: " << phone_book.getContacts(i).getNick() << "\n";
+				std::cout << "Phone number: " << phone_book.getContacts(i).getPhone() << "\n";
+				std::cout << "Dark secret: " << phone_book.getContacts(i).getSecret() << "\n";
+			}
+		}
+	}
+	std::cin.ignore();
 }
 
 int	main(void)
@@ -80,8 +101,11 @@ int	main(void)
 		{
 			contact = save_contact(contact);
 			if (i > 7)
+			{
 				i = 0;
-			phone_book.contacts[i] = contact;
+			}
+			phone_book.setContacts(contact, i);
+			i++;
 		}
 		else if (choice == "SEARCH")
 		{
@@ -91,7 +115,6 @@ int	main(void)
 			break ;
 		else
 			continue ;
-		i++;
 	}
 	return (0);
 }
