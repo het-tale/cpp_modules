@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:36:35 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/04 00:07:29 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/04 01:50:04 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ class	PhoneBook
 {
 	private:
 		Contact contacts[8];
+		int		inc;
 	public:
+		PhoneBook();
 		Contact	getContacts(int i);
 		void	setContacts(Contact contact, int i);
+		int		getInc();
+		void	setInc();
 };
