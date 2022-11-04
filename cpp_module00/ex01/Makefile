@@ -6,13 +6,13 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/11/03 22:25:01 by het-tale         ###   ########.fr        #
+#    Updated: 2022/11/04 02:15:42 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME    =    phone
 
-SRCS    =    *.cpp
+SRCS    =    Contact.cpp PhoneBook.cpp main.cpp
 
 OBJCT    =    ${SRCS:.cpp=.o}
 
