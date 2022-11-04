@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:46:15 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/04 02:11:18 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/04 02:17:56 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,18 +135,14 @@ int	main(void)
 		{
 			contact = save_contact(contact);
 			if (i > 7)
-			{
 				i = 0;
-			}
 			else
 				phone_book.setInc();
 			phone_book.setContacts(contact, i);
 			i++;
 		}
 		else if (choice == "SEARCH")
-		{
 			display_contacts(phone_book);
-		}
 		else if (choice == "EXIT" || std::cin.eof())
 			break ;
 		else
