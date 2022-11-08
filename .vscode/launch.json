@@ -8,8 +8,8 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "megaphone",
-            "args": ["hello"],
+            "program": "phone",
+            "args": [],
             "cwd": "${workspaceFolder}"
         }
     ]
