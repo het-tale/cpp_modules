@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 16:35:49 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 17:13:16 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/09 17:10:35 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/09 18:31:38 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <string>
+#include <iostream>
 
-Zombie* zombieHorde( int N, std::string name )
+int	main()
 {
-	Zombie *zombies;
-	int		i;
-
-	zombies = new Zombie[N];
-	i = -1;
-	while (++i < N)
-		zombies[i].setName(name);
-	return (zombies);
+	std::string br = "HI THIS IS BRAIN";
+	std::string* stringPTR = &br;
+	std::string &stringREF = br;
+	std::cout << &br << "\n";
+	std::cout << stringPTR << "\n";
+	std::cout << &stringREF << "\n";
+	std::cout << br << "\n";
+	std::cout << *stringPTR << "\n";
+	std::cout << stringREF << "\n";
 }

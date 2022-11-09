@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 16:35:49 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 17:13:16 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/09 18:47:36 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/09 18:51:05 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-Zombie* zombieHorde( int N, std::string name )
+HumanA::HumanA(std::string init_name, Weapon init_weapon)
 {
-	Zombie *zombies;
-	int		i;
+	name = init_name;
+	weapon = init_weapon;
+}
 
-	zombies = new Zombie[N];
-	i = -1;
-	while (++i < N)
-		zombies[i].setName(name);
-	return (zombies);
+void	attack( void )
+{
+	std::cout << getName() << " attacks with their " << getType() << "\n";
 }
