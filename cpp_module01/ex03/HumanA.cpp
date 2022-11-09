@@ -6,19 +6,31 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:47:36 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 18:51:05 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/09 22:34:38 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
+#include <iostream>
 
-HumanA::HumanA(std::string init_name, Weapon init_weapon)
+
+HumanA::HumanA(std::string init_name, Weapon &init_weapon)
 {
 	name = init_name;
 	weapon = init_weapon;
 }
 
-void	attack( void )
+std::string HumanA::getName( void )
 {
-	std::cout << getName() << " attacks with their " << getType() << "\n";
+	return (name);
+}
+
+void	HumanA::setName(std::string new_name)
+{
+	name = new_name;
+}
+
+void	HumanA::attack( void )
+{
+	std::cout << name << " attacks with their " << weapon.getType() << "\n";
 }

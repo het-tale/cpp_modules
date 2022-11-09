@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 18:36:33 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 22:34:54 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/09 20:33:33 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/09 22:38:08 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
-#include<iostream>
+#include "HumanA.hpp"
+#include <string>
+#include <iostream>
 
-Weapon::Weapon()
+int main()
 {
-}
-
-Weapon::Weapon(std::string init_type)
-{
-	type = init_type;
-}
-
-const std::string &Weapon::getType( void )
-{
-	return (type);
-}
-
-void	Weapon::setType(std::string new_type)
-{
-	type = new_type;
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	return 0;
 }
