@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:35:01 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/03 16:42:43 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/13 23:54:28 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,57 @@ std::string	Contact::getPhone()
 std::string	Contact::getSecret()
 {
 	return (dark_secret);
+}
+
+void	Contact::exit_program()
+{
+	if (std::cin.eof())
+		exit(0);
+}
+
+Contact	Contact::save_contact()
+{
+	std::string field;
+	Contact		contact;
+
+	while (field.empty())
+	{
+		std::cout << "Enter Your First name\n";
+		std::getline(std::cin, field);
+		exit_program();
+		contact.setFirst(field);
+	}
+	field = "";
+	while (field.empty())
+	{
+		std::cout << "Enter Your Last name\n";
+		std::getline(std::cin, field);
+		exit_program();
+		contact.setLast(field);
+	}
+	field = "";
+	while (field.empty())
+	{
+		std::cout << "Enter Your Nickname\n";
+		std::getline(std::cin, field);
+		exit_program();
+		contact.setNick(field);
+	}
+	field = "";
+	while (field.empty())
+	{
+		std::cout << "Enter Your Phone number\n";
+		std::getline(std::cin, field);
+		exit_program();
+		contact.setPhone(field);
+	}
+	field = "";
+	while (field.empty())
+	{
+		std::cout << "Enter Your Dark secret\n";
+		std::getline(std::cin, field);
+		exit_program();
+		contact.setSecret(field);
+	}
+	return (contact);
 }

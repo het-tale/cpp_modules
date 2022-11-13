@@ -6,15 +6,15 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:44:28 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/03 18:16:21 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 00:41:54 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+#include <string>
 #include <iostream>
 #include <iomanip>
-#include <string.h>
 
 class Contact
 {
@@ -35,4 +35,6 @@ class Contact
 		std::string	getNick();
 		std::string	getPhone();
 		std::string	getSecret();
+		Contact	save_contact();
+		void	exit_program();
 };

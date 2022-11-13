@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:36:35 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/04 02:11:13 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 00:04:20 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,7 @@ class	PhoneBook
 		void	setContacts(Contact contact, int i);
 		int		getInc();
 		void	setInc();
+		int		add_contact(Contact contact, int i);
+		void	display_contacts();
+		void	check_size(std::string str);
 };
