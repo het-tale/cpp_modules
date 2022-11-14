@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:46:15 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/14 00:58:30 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 02:35:54 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ int	main(void)
 		else if (choice == "EXIT" || std::cin.eof())
 			break ;
 		else
+		{
+			std::cout << "Nah! we don't accept these kind of choices\n";
 			continue ;
+		}
 	}
 	return (0);
 }

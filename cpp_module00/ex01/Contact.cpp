@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:35:01 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/14 01:36:39 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 02:15:13 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,52 +14,52 @@
 
 void	Contact::setFirst(std::string first)
 {
-	first_name = first;
+	this->first_name = first;
 }
 
 void	Contact::setLast(std::string last)
 {
-	last_name = last;
+	this->last_name = last;
 }
 
 void	Contact::setNick(std::string nick)
 {
-	nickname = nick;
+	this->nickname = nick;
 }
 
 void	Contact::setPhone(std::string phone)
 {
-	phone_number = phone;
+	this->phone_number = phone;
 }
 
 void	Contact::setSecret(std::string secret)
 {
-	dark_secret = secret;
+	this->dark_secret = secret;
 }
 
 std::string	Contact::getFirst()
 {
-	return (first_name);
+	return (this->first_name);
 }
 
 std::string	Contact::getLast()
 {
-	return (last_name);
+	return (this->last_name);
 }
 
 std::string	Contact::getNick()
 {
-	return (nickname);
+	return (this->nickname);
 }
 
 std::string	Contact::getPhone()
 {
-	return (phone_number);
+	return (this->phone_number);
 }
 
 std::string	Contact::getSecret()
 {
-	return (dark_secret);
+	return (this->dark_secret);
 }
 
 void	Contact::exit_program()
@@ -85,7 +85,7 @@ Contact	Contact::save_contact()
 	{
 		std::cout << "Enter Your First name\n";
 		std::getline(std::cin, field);
-		exit_program();
+		this->exit_program();
 		contact.setFirst(field);
 	}
 	field = "";
@@ -93,7 +93,7 @@ Contact	Contact::save_contact()
 	{
 		std::cout << "Enter Your Last name\n";
 		std::getline(std::cin, field);
-		exit_program();
+		this->exit_program();
 		contact.setLast(field);
 	}
 	field = "";
@@ -109,9 +109,9 @@ Contact	Contact::save_contact()
 	{
 		std::cout << "Enter Your Phone number\n";
 		std::getline(std::cin, field);
-		if (!is_only_digit(field))
+		if (!this->is_only_digit(field))
 			field = "";
-		exit_program();
+		this->exit_program();
 		contact.setPhone(field);
 	}
 	field = "";
@@ -119,7 +119,7 @@ Contact	Contact::save_contact()
 	{
 		std::cout << "Enter Your Dark secret\n";
 		std::getline(std::cin, field);
-		exit_program();
+		this->exit_program();
 		contact.setSecret(field);
 	}
 	return (contact);

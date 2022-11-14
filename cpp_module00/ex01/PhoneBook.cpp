@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:58:42 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/14 00:36:58 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 02:49:13 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,37 +19,33 @@ PhoneBook::PhoneBook()
 
 Contact	PhoneBook::getContacts(int i)
 {
-	return (contacts[i]);
+	return (this->contacts[i]);
 }
 
 void	PhoneBook::setContacts(Contact contact, int i)
 {
-	contacts[i] = contact;
+	this->contacts[i] = contact;
 }
 
 int	PhoneBook::getInc()
 {
-	return (inc);
+	return (this->inc);
 }
 
 void	PhoneBook::setInc()
 {
-	inc++;
+	this->inc++;
 }
 
 int	PhoneBook::add_contact(Contact contact, int i)
 {
-	int j;
-
-	j = 0;
 	if (i > 7)
 	{
-		j++;
 		i = 0;
 	}
-	else if (j == 0)
-		inc++;
-	contacts[i] = contact.save_contact();
+	else if (inc <= 7)
+		this->inc++;
+	this->contacts[i] = contact.save_contact();
 	i++;
 	return (i);
 }
@@ -75,16 +71,16 @@ void	PhoneBook::display_contacts()
 	while (++i < inc)
 	{
 		std::cout << std::setw(10) << i << "|";
-		check_size(contacts[i].getFirst());
+		this->check_size(contacts[i].getFirst());
 		std::cout << "|";
-		check_size(contacts[i].getLast());
+		this->check_size(contacts[i].getLast());
 		std::cout << "|";
-		check_size(contacts[i].getNick());
+		this->check_size(contacts[i].getNick());
 		std::cout << "\n";
 	}
 	std::cout << "Enter Your Index\n";
 	std::cin >> index;
-	contacts[0].exit_program();
+	this->contacts[0].exit_program();
 	n = strtol(index.c_str(), &a, 10);
 	i = -1;
 	if (a[0] != 0 || n >= inc || n < 0)
@@ -95,11 +91,11 @@ void	PhoneBook::display_contacts()
 		{
 			if (n == i)
 			{
-				std::cout << "First name: " << contacts[i].getFirst() << "\n";
-				std::cout << "Last name: " << contacts[i].getLast() << "\n";
-				std::cout << "Nickname: " << contacts[i].getNick() << "\n";
-				std::cout << "Phone number: " << contacts[i].getPhone() << "\n";
-				std::cout << "Dark secret: " << contacts[i].getSecret() << "\n";
+				std::cout << "First name: " << this->contacts[i].getFirst() << "\n";
+				std::cout << "Last name: " << this->contacts[i].getLast() << "\n";
+				std::cout << "Nickname: " << this->contacts[i].getNick() << "\n";
+				std::cout << "Phone number: " << this->contacts[i].getPhone() << "\n";
+				std::cout << "Dark secret: " << this->contacts[i].getSecret() << "\n";
 			}
 		}
 	}
