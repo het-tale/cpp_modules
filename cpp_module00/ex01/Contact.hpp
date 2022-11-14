@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:44:28 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/14 00:41:54 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 01:03:00 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ class Contact
 		std::string	getSecret();
 		Contact	save_contact();
 		void	exit_program();
+		bool	is_only_digit(std::string str);
 };

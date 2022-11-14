@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:35:01 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/13 23:54:28 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 01:09:45 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,19 @@ void	Contact::exit_program()
 		exit(0);
 }
 
+bool	Contact::is_only_digit(std::string str)
+{
+	const char	*st;
+	int		i;
+
+	st = str.c_str();
+	i = -1;
+	while (st[++i])
+		if (!std::isdigit(st[i]))
+			return (false);
+	return (true);
+}
+
 Contact	Contact::save_contact()
 {
 	std::string field;
@@ -101,6 +114,8 @@ Contact	Contact::save_contact()
 	{
 		std::cout << "Enter Your Phone number\n";
 		std::getline(std::cin, field);
+		if (!is_only_digit(field))
+			field = "";
 		exit_program();
 		contact.setPhone(field);
 	}

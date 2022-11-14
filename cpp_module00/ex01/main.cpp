@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:46:15 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/14 00:11:58 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 00:58:30 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,13 @@ int	main(void)
 	int			i;
 
 	i = 0;
-	phone_book = PhoneBook();
 	while (1)
 	{
 		std::cout << "Enter Your choice\n";
 		std::getline(std::cin, choice);
 		contact.exit_program();
 		if (choice == "ADD")
-		{
 			i = phone_book.add_contact(contact, i);
-		}
 		else if (choice == "SEARCH")
 			phone_book.display_contacts();
 		else if (choice == "EXIT" || std::cin.eof())
