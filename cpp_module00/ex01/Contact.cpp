@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:35:01 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/14 01:09:45 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/14 01:36:39 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,8 @@ void	Contact::exit_program()
 
 bool	Contact::is_only_digit(std::string str)
 {
-	const char	*st;
-	int		i;
-
-	st = str.c_str();
-	i = -1;
-	while (st[++i])
-		if (!std::isdigit(st[i]))
+	for (std::string::iterator it=str.begin(); it!=str.end(); it++)
+		if (!std::isdigit(*it))
 			return (false);
 	return (true);
 }

@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:39:18 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 22:13:51 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/11 02:51:14 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class HumanA
 {
 	private:
-		Weapon weapon;
+		Weapon& weapon;
 		std::string name;
 	public:
 		
