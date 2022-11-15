@@ -6,13 +6,13 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/11/15 04:42:51 by het-tale         ###   ########.fr        #
+#    Updated: 2022/11/15 06:23:36 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    =   violence
+NAME    =   replace
 
-SRCS    =    main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS    =    *.cpp
 
 OBJCT    =    ${SRCS:.cpp=.o}
 

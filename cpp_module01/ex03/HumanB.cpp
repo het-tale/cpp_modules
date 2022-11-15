@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 01:59:03 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/15 03:06:27 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 05:23:03 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 06:14:57 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-int	main( void )
+HumanB::HumanB(std::string name)
 {
-	Zombie*	zozo;
-	
-	zozo = zombieHorde(5, "hasnaa");
-	for (int i = 0; i < 5; i++)
-		zozo->announce();
-	delete[] zozo;
-	return (0);
+	this->name = name;
 }
+
+std::string HumanB::getName()
+{
+	return (this->name);
+}
+
+void	HumanB::setName(std::string name)
+{
+	this->name = name;
+}
+
+void HumanB::setWeapon(Weapon& weapon)
+{
+	this->weapon = &weapon;
+}
+
+void HumanB::attack( void )
+{
+	std::cout << this->name << " attacks with their ";
+	std::cout << this->weapon->getType() << "\n";
+}
+

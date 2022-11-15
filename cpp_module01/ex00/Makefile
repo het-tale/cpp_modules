@@ -6,13 +6,13 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/11/09 15:55:33 by het-tale         ###   ########.fr        #
+#    Updated: 2022/11/15 02:27:32 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    =    Zombie
+NAME    =    brainzz
 
-SRCS    =    Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRCS    =    main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OBJCT    =    ${SRCS:.cpp=.o}
 

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 15:46:11 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 16:28:06 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 01:56:38 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 02:34:33 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void randomChump( std::string name )
 {
-	Zombie	*zomb;
-
-	zomb = new Zombie(name);
-	zomb->announce();
+	Zombie zo(name);
+	zo.announce();
 }

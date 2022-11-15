@@ -5,20 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 15:44:02 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 16:30:47 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 01:59:03 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 02:36:34 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Zombie.hpp"
 
-int	main()
+int	main( void )
 {
-	Zombie zombie("Hasnaa");
-	Zombie	*zo;
+	Zombie zoz("hasnaa");
+	Zombie*	zozo;
 	
-	zo = newZombie("Aya");
-	randomChump("Sousou");
+	zoz.announce();
+	zozo = newZombie("sara");
+	zozo->announce();
+	randomChump("hello");
+	delete zozo;
 	return (0);
 }

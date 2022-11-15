@@ -6,13 +6,13 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/11/09 16:34:32 by het-tale         ###   ########.fr        #
+#    Updated: 2022/11/15 03:13:25 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    =    Zombie
+NAME    =    MoarBrainzz
 
-SRCS    =    Zombie.cpp main.cpp zombieHorde.cpp
+SRCS    =    main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJCT    =    ${SRCS:.cpp=.o}
 

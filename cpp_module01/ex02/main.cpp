@@ -5,23 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 17:10:35 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 18:31:38 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 03:08:49 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 03:14:03 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
 #include <iostream>
+#include <string>
 
-int	main()
+int main( void )
 {
-	std::string br = "HI THIS IS BRAIN";
-	std::string* stringPTR = &br;
-	std::string &stringREF = br;
-	std::cout << &br << "\n";
+	std::string	str = "HI THIS IS BRAIN";
+	std::string*	stringPTR = &str;
+	std::string&	stringREF = str;
+
+	std::cout << &str << "\n";
 	std::cout << stringPTR << "\n";
 	std::cout << &stringREF << "\n";
-	std::cout << br << "\n";
+	std::cout << str << "\n";
 	std::cout << *stringPTR << "\n";
 	std::cout << stringREF << "\n";
+	return (0);
 }

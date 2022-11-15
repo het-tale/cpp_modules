@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 18:39:18 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/11 02:51:14 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 05:00:27 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 05:15:53 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef HUMANA_HPP
-# define HUMANA_HPP
-#include <string>
+#define HUMANA_HPP
+
 #include "Weapon.hpp"
 
 class HumanA
@@ -22,13 +22,9 @@ class HumanA
 		Weapon& weapon;
 		std::string name;
 	public:
-		
-		HumanA(std::string init_name, Weapon &init_weapon);
-		HumanA();
-		void	attack( void );
-		Weapon getWeapon( void );
-		void	setWeapon(Weapon new_weapon);
-		std::string getName( void );
-		void	setName(std::string new_name);
+		HumanA(std::string name, Weapon& weapon);
+		std::string getName();
+		void	setName(std::string name);
+		void attack( void );
 };
 #endif

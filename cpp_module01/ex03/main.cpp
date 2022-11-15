@@ -5,15 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 20:33:33 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 22:38:08 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 04:52:23 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 06:15:12 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
 #include "HumanA.hpp"
-#include <string>
-#include <iostream>
+#include "HumanB.hpp"
 
 int main()
 {
@@ -24,5 +22,13 @@ int main()
 		club.setType("some other type of club");
 		bob.attack();
 	}
-	return 0;
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+return 0;
 }

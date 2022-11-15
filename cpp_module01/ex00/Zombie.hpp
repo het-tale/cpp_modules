@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 00:05:00 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 16:27:57 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 01:38:24 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 02:34:08 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie
 	private:
 		std::string	name;
 	public:
+		Zombie();
 		Zombie(std::string name);
 		~Zombie();
 		void	announce( void );

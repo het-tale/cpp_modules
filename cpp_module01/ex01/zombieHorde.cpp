@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 16:35:49 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 17:13:16 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 02:40:58 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 03:03:18 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 Zombie* zombieHorde( int N, std::string name )
 {
-	Zombie *zombies;
-	int		i;
+	Zombie* zozos;
 
-	zombies = new Zombie[N];
-	i = -1;
-	while (++i < N)
-		zombies[i].setName(name);
-	return (zombies);
+	zozos = new Zombie[N];
+	for (int i = 0; i < N; i++)
+		zozos[i].setName(name);
+	return (zozos);
 }

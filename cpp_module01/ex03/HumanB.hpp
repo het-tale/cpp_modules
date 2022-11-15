@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 01:59:03 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/15 03:06:27 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 05:22:11 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 06:14:43 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
-int	main( void )
+#include "Weapon.hpp"
+
+class HumanB
 {
-	Zombie*	zozo;
-	
-	zozo = zombieHorde(5, "hasnaa");
-	for (int i = 0; i < 5; i++)
-		zozo->announce();
-	delete[] zozo;
-	return (0);
-}
+	private:
+		Weapon*  weapon;
+		std::string name;
+	public:
+		HumanB(std::string name);
+		std::string getName();
+		void	setName(std::string name);
+		Weapon getWeapon( void );
+		void setWeapon(Weapon& weapon);
+		void attack( void );
+};
+#endif

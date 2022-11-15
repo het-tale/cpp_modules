@@ -6,11 +6,11 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/11/09 17:10:21 by het-tale         ###   ########.fr        #
+#    Updated: 2022/11/15 03:13:30 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    =    Brain
+NAME    =   ThisisBrain
 
 SRCS    =    main.cpp
 

@@ -5,29 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 18:36:33 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/09 22:34:54 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/15 04:50:00 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/15 05:12:31 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
-#include<iostream>
 
 Weapon::Weapon()
+{}
+
+Weapon::Weapon(std::string type)
 {
+	this->type = type;
 }
 
-Weapon::Weapon(std::string init_type)
+const std::string& Weapon::getType()
 {
-	type = init_type;
+	return (this->type);
 }
 
-const std::string &Weapon::getType( void )
+void	Weapon::setType(std::string type)
 {
-	return (type);
-}
-
-void	Weapon::setType(std::string new_type)
-{
-	type = new_type;
+	this->type = type;
 }
