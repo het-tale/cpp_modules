@@ -5,18 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 06:24:35 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/17 00:03:09 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/17 00:41:20 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/17 01:45:40 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "replace.hpp"
+#include "Harl.hpp"
 
-int main(int argc, char *argv[])
+int	main()
 {
-	if (argc == 4)
-		replace(argv);
-	else
-		std::cout << "Your program must take 3 arguments!\n";
+	Harl harlito;
+
+	harlito.complain("INFO");
 	return (0);
 }

@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 06:24:35 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/17 00:03:09 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/17 00:22:38 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/17 02:06:31 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "replace.hpp"
+#pragma once
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int main(int argc, char *argv[])
+#include <iostream>
+#include <string>
+
+class Harl
 {
-	if (argc == 4)
-		replace(argv);
-	else
-		std::cout << "Your program must take 3 arguments!\n";
-	return (0);
-}
+	private:
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+	public:
+		void complain( std::string level );
+		int	getLevel( std::string level );
+};
+#endif

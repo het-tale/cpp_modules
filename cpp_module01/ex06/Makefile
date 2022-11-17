@@ -6,13 +6,13 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/11/17 00:02:56 by het-tale         ###   ########.fr        #
+#    Updated: 2022/11/17 01:48:20 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    =   sed
+NAME    =   HarlFilter
 
-SRCS    =    main.cpp replace.cpp
+SRCS    =    main.cpp Harl.cpp
 
 OBJCT    =    ${SRCS:.cpp=.o}
 
