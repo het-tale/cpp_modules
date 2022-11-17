@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 23:58:27 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/17 05:50:33 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/17 08:25:14 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,14 @@ void	replace(char *argv[])
 		return ;
 	}
 	out_file = argv[1];
-	replace_file.open(out_file.append(".replace"), std::ios::out);
 	search = argv[2];
 	replace = argv[3];
+	if (search.empty())
+	{
+		std::cout << "The first string cannot be empty\n";
+		return ;
+	}
+	replace_file.open(out_file.append(".replace"), std::ios::out);
 	while (getline(file, str))
 	{
 		if (str.empty())
@@ -49,7 +54,9 @@ void	replace(char *argv[])
 			str.insert(pos, replace);
 			pp = pp + search.size();
 		}
-		replace_file << str << "\n";
+		replace_file << str;
+		if (!file.eof())
+			replace_file << "\n";
 	}
 	file.close();
 	replace_file.close();
