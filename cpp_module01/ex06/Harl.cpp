@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 00:26:08 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/17 02:13:28 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/17 08:35:27 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void Harl::complain( std::string level )
 				(this->*fptr[i]) ();
 				i++;
 			}
+			break ;
 		}
 		i++;
 	}
