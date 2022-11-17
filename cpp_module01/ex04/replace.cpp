@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 23:58:27 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/17 08:25:14 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/17 08:41:54 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	replace(char *argv[])
 				break ;
 			str.erase(pos, search.size());
 			str.insert(pos, replace);
-			pp = pp + search.size();
+			pp = pp + replace.size();
 		}
 		replace_file << str;
 		if (!file.eof())
