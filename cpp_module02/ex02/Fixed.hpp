@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 06:40:17 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/20 10:11:21 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/21 00:44:33 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ class Fixed
 		int toInt( void ) const;
 		bool operator> (const Fixed& fixed) const;
 		bool operator< (const Fixed& fixed) const;
-		bool operator>= (const Fixed& fixed);
-		bool operator<= (const Fixed& fixed);
-		bool operator!= (const Fixed& fixed);
-		bool operator== (const Fixed& fixed);
+		bool operator>= (const Fixed& fixed) const;
+		bool operator<= (const Fixed& fixed) const;
+		bool operator!= (const Fixed& fixed) const;
+		bool operator== (const Fixed& fixed) const;
 		Fixed operator+ (const Fixed& fixed);
 		Fixed operator- (const Fixed& fixed);
 		Fixed operator* (const Fixed& fixed);

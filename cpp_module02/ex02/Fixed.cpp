@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 06:43:44 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/20 10:19:15 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/21 00:44:55 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ bool Fixed::operator< (const Fixed& fixed) const
 		return (false);
 }
 
-bool Fixed::operator>= (const Fixed& fixed)
+bool Fixed::operator>= (const Fixed& fixed) const
 {
 	if (this->fixed_point >= fixed.fixed_point)
 		return (true);
@@ -99,7 +99,7 @@ bool Fixed::operator>= (const Fixed& fixed)
 		return (false);
 }
 
-bool Fixed::operator<= (const Fixed& fixed)
+bool Fixed::operator<= (const Fixed& fixed) const
 {
 	if (this->fixed_point <= fixed.fixed_point)
 		return (true);
@@ -107,7 +107,7 @@ bool Fixed::operator<= (const Fixed& fixed)
 		return (false);
 }
 
-bool Fixed::operator!= (const Fixed& fixed)
+bool Fixed::operator!= (const Fixed& fixed) const
 {
 	if (this->fixed_point != fixed.fixed_point)
 		return (true);
@@ -115,7 +115,7 @@ bool Fixed::operator!= (const Fixed& fixed)
 		return (false);
 }
 
-bool Fixed::operator== (const Fixed& fixed)
+bool Fixed::operator== (const Fixed& fixed) const
 {
 	if (this->fixed_point == fixed.fixed_point)
 		return (true);
