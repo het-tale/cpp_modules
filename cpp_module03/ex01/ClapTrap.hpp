@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 05:58:09 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 06:58:21 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:16:32 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string	_name;
 		int	_hit_points;
 		int	_energy_points;
