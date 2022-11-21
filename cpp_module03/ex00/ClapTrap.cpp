@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 06:04:34 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 20:40:01 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 00:08:45 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ ClapTrap&	ClapTrap::operator= (const ClapTrap& clap)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called\n";
+	std::cout << "ClapTrap Destructor called\n";
 }
 
 std::string ClapTrap::getName( void ) const
@@ -91,26 +91,36 @@ void	ClapTrap::setHit(int hitPoints)
 
 void ClapTrap::attack(const std::string& target)
 {
+	if (!this->getEnergy() || !this->getHit())
+	{
+		std::cout << "This clapTrap can't attack\n";
+		return ;
+	}
 	std::cout << "ClapTrap " << this->getName() << " attacks " << target << ", causing ";
 	std::cout << this->getAttack() << " points of damage\n";
-	if (!this->getEnergy() || !this->getHit())
-		return ;
 	this->_energy_points--;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "ClapTrap " << this->getName() << " repairs himself getting " << amount << " hit points back\n";
 	if (!this->getEnergy() || !this->getHit())
+	{
+		std::cout << "This clapTrap can't repair himself\n";
 		return ;
+	}
+	std::cout << "ClapTrap " << this->getName() << " repairs himself getting " << amount << " hit points back\n";
 	this->_hit_points += amount;
 	this->_energy_points--;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "ClapTrap " << this->getName() << " take " << amount << " points of damage\n";
-	if (!this->getEnergy() || !this->getHit())
+	if (!this->getHit() || amount > (unsigned int) this->getHit())
+	{
+		std::cout << "I can't take damage anymore!\n";
+		this->_hit_points = 0;
 		return ;
+	}
+	std::cout << "ClapTrap " << this->getName() << " take " << amount << " points of damage\n";
 	this->_hit_points -= amount;
 }
