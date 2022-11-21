@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 10:32:35 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 19:16:52 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:31:08 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <iostream>
 #include <string>
 
-class ScavTrap: public ClapTrap
+class ScavTrap: virtual public ClapTrap
 {
     public:
         ScavTrap();

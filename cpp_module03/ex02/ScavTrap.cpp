@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 18:20:11 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 20:39:05 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/21 20:41:30 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ ScavTrap::ScavTrap(std::string name) :
 	this->_energy_points = 50;
 	this->_attack_damage = 20;
 }
-
 ScavTrap::ScavTrap(const ScavTrap& scav)
 {
 	std::cout << "ScavTrap copy constructor called\n";
