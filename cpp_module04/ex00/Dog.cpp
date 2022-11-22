@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 21:19:15 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 21:35:43 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 06:13:44 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void    Dog::setType(std::string type)
     this->type = type;
 }
 
-void Dog::makeSound()
+void Dog::makeSound() const
 {
     std::cout << "Bark\n";
 }

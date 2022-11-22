@@ -6,13 +6,13 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/11/21 20:52:55 by het-tale         ###   ########.fr        #
+#    Updated: 2022/11/22 08:01:13 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME    =    animal
 
-SRCS    =    main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRCS    =    main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJCT    =    ${SRCS:.cpp=.o}
 
