@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 10:32:35 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 19:16:52 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 00:56:06 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,5 @@ class ScavTrap: public ClapTrap
         ~ScavTrap();
         void guardGate();
         void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 };
 #endif

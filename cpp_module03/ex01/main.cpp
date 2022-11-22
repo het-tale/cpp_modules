@@ -6,12 +6,11 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 06:56:03 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 18:58:03 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 01:25:46 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
 
 int main()
 {
@@ -25,14 +24,15 @@ int main()
 	std::cout << clap2.getHit() << std::endl;
 	std::cout << clap2.getEnergy() << std::endl;
 	std::cout << clap2.getAttack() << std::endl;
-	
 	clap1.attack(clap2.getName());
-	clap2.takeDamage(5);
-	std::cout << clap2.getHit() << std::endl;
-	clap2.beRepaired(5);
-	std::cout << clap2.getHit() << std::endl;
-	std::cout << clap2.getEnergy() << std::endl;
-	std::cout << clap1.getEnergy() << std::endl;
+	
+	std::cout << scav1.getName() << std::endl;
 	std::cout << scav1.getHit() << std::endl;
+	std::cout << scav1.getEnergy() << std::endl;
+	std::cout << scav1.getAttack() << std::endl;
+
+	scav1.attack("someone");
+	scav1.guardGate();
+	
 	return (0);
 }

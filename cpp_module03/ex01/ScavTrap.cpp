@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 18:20:11 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 20:39:05 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 01:03:13 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ScavTrap::ScavTrap()
 	this->_attack_damage = 20;
 }
 
-ScavTrap::ScavTrap(std::string name) :
+ScavTrap::ScavTrap(std::string name)
 {
 	std::cout << "ScavTrap  parametric constructor called\n";
 	this->_name = name;
@@ -56,26 +56,12 @@ void    ScavTrap::guardGate()
 
 void ScavTrap::attack(const std::string& target)
 {
+	if (!this->getEnergy() || !this->getHit())
+	{
+		std::cout << "This ScavTrap can't attack\n";
+		return ;
+	}
 	std::cout << "ScavTrap " << this->getName() << " attacks " << target << ", causing ";
 	std::cout << this->getAttack() << " points of damage\n";
-	if (!this->getEnergy() || !this->getHit())
-		return ;
 	this->_energy_points--;
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-	std::cout << "ScavTrap " << this->getName() << " repairs himself getting " << amount << " hit points back\n";
-	if (!this->getEnergy() || !this->getHit())
-		return ;
-	this->_hit_points += amount;
-	this->_energy_points--;
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-	std::cout << "ScavTrap " << this->getName() << " take " << amount << " points of damage\n";
-	if (!this->getEnergy() || !this->getHit())
-		return ;
-	this->_hit_points -= amount;
 }

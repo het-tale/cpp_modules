@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 05:58:09 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 18:16:32 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 01:17:32 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class ClapTrap
 		void	setEnergy(int energyPoints);
 		void	setAttack(int attackDamage);
 		void	setHit(int hitPoints);
-		void attack(const std::string& target);
+		virtual void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 };
