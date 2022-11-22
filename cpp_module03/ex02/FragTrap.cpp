@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 19:05:13 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 20:43:24 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 01:35:09 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ FragTrap&	FragTrap::operator= (const FragTrap& frag)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap Destructor called\n";
+	std::cout << "FragTrap "<< this->_name << " destroyed\n";
 }
 
 void    FragTrap::highFivesGuys( void )
@@ -54,28 +54,3 @@ void    FragTrap::highFivesGuys( void )
     std::cout << "High five me guyyyyyys!\n";
 }
 
-void FragTrap::attack(const std::string& target)
-{
-	std::cout << "FragTrap " << this->getName() << " attacks " << target << ", causing ";
-	std::cout << this->getAttack() << " points of damage\n";
-	if (!this->getEnergy() || !this->getHit())
-		return ;
-	this->_energy_points--;
-}
-
-void FragTrap::beRepaired(unsigned int amount)
-{
-	std::cout << "FragTrap " << this->getName() << " repairs himself getting " << amount << " hit points back\n";
-	if (!this->getEnergy() || !this->getHit())
-		return ;
-	this->_hit_points += amount;
-	this->_energy_points--;
-}
-
-void FragTrap::takeDamage(unsigned int amount)
-{
-	std::cout << "FragTrap " << this->getName() << " take " << amount << " points of damage\n";
-	if (!this->getEnergy() || !this->getHit())
-		return ;
-	this->_hit_points -= amount;
-}

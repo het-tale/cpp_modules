@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 19:01:37 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 19:33:56 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 01:30:10 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,5 @@ class FragTrap: public ClapTrap
         ~FragTrap();
         void highFivesGuys(void);
         void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 };
 #endif

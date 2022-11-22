@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 18:20:11 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/21 20:41:30 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 01:34:32 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ScavTrap::ScavTrap()
 	this->_attack_damage = 20;
 }
 
-ScavTrap::ScavTrap(std::string name) :
+ScavTrap::ScavTrap(std::string name)
 {
 	std::cout << "ScavTrap  parametric constructor called\n";
 	this->_name = name;
@@ -45,7 +45,7 @@ ScavTrap&	ScavTrap::operator= (const ScavTrap& scav)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap Destructor called\n";
+	std::cout << "ScavTrap "<< this->_name << " destroyed\n";
 }
 
 void    ScavTrap::guardGate()
