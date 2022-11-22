@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 21:10:39 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/22 06:13:40 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 09:33:26 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Cat::Cat(std::string type)
     this->type = type;
 }
 
-Cat::Cat(const Cat& cat) : Animal(cat)
+Cat::Cat(const Cat& cat)
 {
     std::cout << "Cat's copy constructor called\n";
     *this = cat;

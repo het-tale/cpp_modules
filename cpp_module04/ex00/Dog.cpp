@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 21:19:15 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/22 06:13:44 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/22 09:33:34 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Dog::Dog(std::string type)
     this->type = type;
 }
 
-Dog::Dog(const Dog& dog) : Animal(dog)
+Dog::Dog(const Dog& dog)
 {
     std::cout << "Dog's copy constructor called\n";
     *this = dog;
