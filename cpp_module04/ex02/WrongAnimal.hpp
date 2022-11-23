@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 21:09:00 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/23 09:53:28 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/22 06:15:37 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/22 08:02:47 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
 #include <iostream>
 #include <string>
 
-class Cat : public Animal
+class WrongAnimal
 {
-    private:
-        Brain* brain;
+    protected:
+        std::string type;
     public:
-        Cat();
-        Cat(std::string type);
-        Cat(const Cat& cat);
-        Cat& operator= (const Cat& cat);
-        ~Cat();
+        WrongAnimal();
+        WrongAnimal(std::string type);
+        WrongAnimal(const WrongAnimal& animal);
+        WrongAnimal& operator= (const WrongAnimal& animal);
+        ~WrongAnimal();
+        std::string getType( void ) const;
         void    setType(std::string type);
         void    makeSound( void ) const;
-        Brain*  getBrain( void ) const;
 };
 #endif

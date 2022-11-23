@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 21:10:39 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/22 11:40:51 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/23 10:00:45 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,9 @@ void    Cat::setType(std::string type)
 void Cat::makeSound() const
 {
     std::cout << "Meoww\n";
+}
+
+Brain*  Cat::getBrain( void ) const
+{
+    return (this->brain);
 }

@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 21:17:47 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/22 11:02:04 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/23 09:54:31 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ class Dog : public Animal
         ~Dog();
         void    setType(std::string type);
         void    makeSound( void ) const;
+        Brain*  getBrain( void ) const;
 };
 #endif

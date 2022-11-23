@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 21:09:00 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/23 09:53:28 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/22 07:50:07 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/22 07:54:15 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include "WrongAnimal.hpp"
 #include <iostream>
 #include <string>
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
-    private:
-        Brain* brain;
     public:
-        Cat();
-        Cat(std::string type);
-        Cat(const Cat& cat);
-        Cat& operator= (const Cat& cat);
-        ~Cat();
+        WrongCat();
+        WrongCat(std::string type);
+        WrongCat(const WrongCat& cat);
+        WrongCat& operator= (const WrongCat& cat);
+        ~WrongCat();
         void    setType(std::string type);
         void    makeSound( void ) const;
-        Brain*  getBrain( void ) const;
 };
 #endif

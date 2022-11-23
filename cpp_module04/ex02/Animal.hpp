@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 21:09:00 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/23 09:53:28 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/21 20:53:12 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/23 09:42:09 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
 #include <iostream>
 #include <string>
 
-class Cat : public Animal
+class Animal
 {
-    private:
-        Brain* brain;
+    protected:
+        std::string type;
     public:
-        Cat();
-        Cat(std::string type);
-        Cat(const Cat& cat);
-        Cat& operator= (const Cat& cat);
-        ~Cat();
-        void    setType(std::string type);
-        void    makeSound( void ) const;
-        Brain*  getBrain( void ) const;
+        Animal();
+        Animal(std::string type);
+        Animal(const Animal& animal);
+        Animal& operator= (const Animal& animal);
+        ~Animal();
+        std::string getType( void ) const;
+        virtual void    setType(std::string type);
+        virtual void    makeSound( void ) const = 0;
 };
 #endif

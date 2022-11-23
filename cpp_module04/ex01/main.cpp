@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 21:21:19 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/22 11:47:08 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/23 10:03:20 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,25 @@
 
 int main()
 {
-   const Animal*   animals[10];
-    const Animal* j = new Dog();
-    const Animal* k = new Cat();
+   Animal*   animals[4];
+   Cat  kitten1("katkota");
+   Cat kitten2(kitten1);
+   
+   kitten1.getBrain()->setIdeas("clever", 0);
+   kitten2.getBrain()->setIdeas("lamp", 0);
 
-    for (int i = 0; i < 10; i++)
+    std::cout << kitten1.getBrain()->getIdeas(0) << std::endl;
+    std::cout << kitten2.getBrain()->getIdeas(0) << std::endl;
+   
+    //Test for leaks
+    for (int i = 0; i < 4; i++)
     {
-        if (i < 5)
-            animals[i] = j;
+        if (i < 2)
+            animals[i] = new Dog();
         else
-            animals[i] = k;
+            animals[i] = new Cat();
     }
-    
-   delete j;//should not create a leak
-   delete k;
+    for (int i = 0; i < 4; i++)
+        delete animals[i];
     return 0;
 }

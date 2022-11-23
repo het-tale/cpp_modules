@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 21:09:00 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/23 09:53:28 by het-tale         ###   ########.fr       */
+/*   Created: 2022/11/22 08:12:14 by het-tale          #+#    #+#             */
+/*   Updated: 2022/11/22 11:08:32 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
 #include <iostream>
 #include <string>
 
-class Cat : public Animal
+class Brain
 {
     private:
-        Brain* brain;
+        std::string	ideas[100];
     public:
-        Cat();
-        Cat(std::string type);
-        Cat(const Cat& cat);
-        Cat& operator= (const Cat& cat);
-        ~Cat();
-        void    setType(std::string type);
-        void    makeSound( void ) const;
-        Brain*  getBrain( void ) const;
+        Brain();
+        Brain(std::string type);
+        Brain(const Brain& brain);
+        Brain& operator= (const Brain& brain);
+        ~Brain();
+        std::string getIdeas(int i) const;
+        void    setIdeas(std::string idea, int i);
 };
 #endif
