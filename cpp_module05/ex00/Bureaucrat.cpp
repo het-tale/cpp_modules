@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:43:32 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/26 11:55:36 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/26 13:03:38 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Bureaucrat& Bureaucrat::operator= (const Bureaucrat& bureaucrat)
 	return (*this);
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& bureaucrat)
+Bureaucrat::Bureaucrat(const Bureaucrat& bureaucrat) : _name(bureaucrat._name)
 {
 	*this = bureaucrat;
 }

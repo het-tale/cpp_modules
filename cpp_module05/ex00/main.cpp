@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:21:43 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/26 11:54:47 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/26 13:04:25 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ int	main( void )
 	{
 		Bureaucrat	bu(3, "hasnaa");
 		Bureaucrat	bu2(150, "test");
+		Bureaucrat	bu3(bu);
 		bu.incrementGrade();
-		bu2.decrementGrade();
-		std::cout << bu << std::endl;
+		//bu2.decrementGrade();
+		std::cout << bu3 << std::endl;
 	}
 	catch(Bureaucrat::GradeTooHighException& e)
 	{
