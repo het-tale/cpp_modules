@@ -6,15 +6,16 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:43:32 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/26 13:03:38 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/26 14:25:28 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat()
+Bureaucrat::Bureaucrat() : _name("hasnaa")
 {
 	std::cout << "Bureaucrat's default constructor called\n";
+	this->_grade = 150;
 }
 
 Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name)
@@ -64,6 +65,15 @@ void	Bureaucrat::decrementGrade( void )
 	this->_grade++;
 	if (this->_grade > 150)
 		throw GradeTooLowException();
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const _NOEXCEPT
+{
+	return "Grade too high";
+}
+const char* Bureaucrat::GradeTooLowException::what() const _NOEXCEPT
+{
+	return "Grade too low";
 }
 
 std::ostream& operator<< (std::ostream& out, const Bureaucrat& bureaucrat)
