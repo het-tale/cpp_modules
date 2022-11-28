@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:31:42 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/26 14:38:52 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:40:17 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,14 @@ class Bureaucrat
         class GradeTooHighException : public std::exception
         {
             public:
-                const char*   what() const _NOEXCEPT;
+                const char*   what() const throw();
         };
         class GradeTooLowException : public std::exception
         {
             public:
-                const char*   what() const _NOEXCEPT;
+                const char*   what() const throw();
         };
+        void    executeForm(Form const & form);
 };
 std::ostream& operator<< (std::ostream& out,const Bureaucrat& bureaucrat);
 #endif

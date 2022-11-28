@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:09:14 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/26 14:38:18 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:53:07 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,17 +65,17 @@ int	Form::getExecutedGrade( void ) const
 
 void	Form::beSigned(Bureaucrat& bureaucrat)
 {
-	if (bureaucrat.getGrade() <= 1)
+	if (bureaucrat.getGrade() <= this->_signedGrade)
 		this->_signed = true;
-	else if (bureaucrat.getGrade() > 150)
+	else
 		throw GradeTooLowException();
 }
 
-const char* Form::GradeTooHighException::what() const _NOEXCEPT
+const char* Form::GradeTooHighException::what() const throw()
 {
 	return "Grade too high";
 }
-const char* Form::GradeTooLowException::what() const _NOEXCEPT
+const char* Form::GradeTooLowException::what() const throw()
 {
 	return "Grade too low";
 }

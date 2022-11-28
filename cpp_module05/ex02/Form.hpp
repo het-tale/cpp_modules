@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:09:41 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/26 14:38:50 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:54:28 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,14 @@ class Form
         class GradeTooHighException : public std::exception
         {
             public:
-                const char*   what() const _NOEXCEPT;
+                const char*   what() const throw();
         };
         class GradeTooLowException : public std::exception
         {
             public:
-                const char*   what() const _NOEXCEPT;
+                const char*   what() const throw();
         };
+        virtual void    execute(Bureaucrat const & executor) const;
 };
 std::ostream& operator<< (std::ostream& out,const Form& form);
 #endif

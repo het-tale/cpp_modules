@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:43:32 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/26 14:39:05 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:46:27 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,11 @@ void	Bureaucrat::decrementGrade( void )
 		throw GradeTooLowException();
 }
 
-const char* Bureaucrat::GradeTooHighException::what() const _NOEXCEPT
+const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return "Grade too high";
 }
-const char* Bureaucrat::GradeTooLowException::what() const _NOEXCEPT
+const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return "Grade too low";
 }
@@ -82,6 +82,14 @@ void	Bureaucrat::signForm(Form& form)
 		std::cout << this->_name << " signed " << form.getName() << std::endl;
 	else
 		std::cout << this->_name << " couldn't sign " << form.getName() << " because he doesn't want.\n";
+}
+
+void	Bureaucrat::executeForm(Form const & form)
+{
+	if (this->_grade <= form.getExecutedGrade())
+		std::cout << this->_name << " executed " << form.getName() << std::endl;
+	else
+		std::cerr << this->_name << " couldn't execute " << form.getName() << std::endl;
 }
 
 std::ostream& operator<< (std::ostream& out, const Bureaucrat& bureaucrat)
