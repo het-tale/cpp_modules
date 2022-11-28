@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:31:42 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 17:40:53 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 22:05:58 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Bureaucrat
         Bureaucrat& operator= (const Bureaucrat& bureaucrat);
         ~Bureaucrat();
 		int	getGrade( void ) const;
+        void    setGrade(int grade);
 		std::string getName( void ) const;
 		void	incrementGrade();
 		void	decrementGrade();
