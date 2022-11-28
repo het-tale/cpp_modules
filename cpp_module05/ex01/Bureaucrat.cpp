@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:43:32 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 17:40:53 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 23:40:13 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,11 @@ int	Bureaucrat::getGrade( void ) const
 std::string Bureaucrat::getName( void ) const
 {
 	return (this->_name);
+}
+
+void	Bureaucrat::setGrade(int grade)
+{
+	this->_grade = grade;
 }
 
 void	Bureaucrat::incrementGrade( void )
