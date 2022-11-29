@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 18:18:06 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/29 01:38:12 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 02:32:42 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator= (const PresidentialPar
 	return (*this);
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& president) : Form()
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& president) : Form(president.getName(), president.getSignedGrade(), president.getExecutedGrade())
 {
 	*this = president;
 }

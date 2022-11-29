@@ -6,15 +6,15 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:43:32 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/29 01:35:23 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 02:24:07 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("hasnaa")
+Bureaucrat::Bureaucrat() : _name("DEFAULT")
 {
-	std::cout << "Bureaucrat's default constructor called\n";
+	std::cout << "Bureaucrat: "<< this->_name <<" default constructor called\n";
 	this->_grade = 150;
 }
 
@@ -33,7 +33,7 @@ Bureaucrat& Bureaucrat::operator= (const Bureaucrat& bureaucrat)
 	return (*this);
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& bureaucrat)
+Bureaucrat::Bureaucrat(const Bureaucrat& bureaucrat) : _name(bureaucrat._name)
 {
 	*this = bureaucrat;
 }

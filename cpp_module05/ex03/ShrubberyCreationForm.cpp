@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 15:01:24 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/29 01:47:02 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 02:28:38 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator= (const ShrubberyCreation
 	return (*this);
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& shrubbery) : Form()
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& shrubbery) : Form(shrubbery.getName(), shrubbery.getSignedGrade(), shrubbery.getExecutedGrade())
 {
 	*this = shrubbery;
 }

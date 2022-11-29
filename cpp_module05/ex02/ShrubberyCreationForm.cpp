@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 15:01:24 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/29 00:43:19 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 02:29:40 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void    ShrubberyCreationForm::setTarget(std::string target)
 {
 	this->_target = target;
 }
- 
+
 void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	if (!this->getSigned() || executor.getGrade() > this->getExecutedGrade())

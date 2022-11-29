@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 18:01:24 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/29 01:45:54 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 02:31:41 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator= (const RobotomyRequestForm& 
 	return (*this);
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& robot) : Form()
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& robot) : Form(robot.getName(), robot.getSignedGrade(), robot.getExecutedGrade())
 {
 	*this = robot;
 }
