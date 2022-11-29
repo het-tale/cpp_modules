@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:09:14 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 23:18:41 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 23:54:06 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,9 @@ std::ostream& operator<< (std::ostream& out, const Form& form)
 {
 	std::string	s;
 	if (form.getSigned())
-		s = "is signed";
+		s = " is signed";
 	else
-		s = "is not signed";
+		s = " is not signed";
 	out << form.getName() << s << ", form signed grade " << form.getSignedGrade() << ", form executed grade " << form.getExecutedGrade();
 	return (out);
 }

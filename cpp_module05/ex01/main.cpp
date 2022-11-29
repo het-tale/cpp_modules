@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:21:43 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 23:47:09 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 23:53:30 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main( void )
 		//f.beSigned(bu);
 		std::cout << f.getSigned() << std::endl;
 		bu.signForm(f);
+		std::cout << f << std::endl;
 	}
 	catch(std::exception& e)
 	{
