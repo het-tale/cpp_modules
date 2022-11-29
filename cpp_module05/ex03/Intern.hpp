@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 18:32:52 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 19:17:11 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:52:41 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 #define INTERN_HPP
 
 #include <iostream>
-#include <cstdlib>
 #include <string>
-#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 class Bureaucrat;
 class Form;
 class Intern

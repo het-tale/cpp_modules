@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:09:14 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 16:53:07 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:33:50 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,11 @@ const char* Form::GradeTooLowException::what() const throw()
 
 std::ostream& operator<< (std::ostream& out, const Form& form)
 {
-	out << form.getName() << ", form signed grade " << form.getSignedGrade() << ", form signed grade " << form.getExecutedGrade();
+	std::string	s;
+	if (form.getSigned())
+		s = " is signed";
+	else
+		s = " is not signed";
+	out << form.getName() << s << ", form signed grade " << form.getSignedGrade() << ", form executed grade " << form.getExecutedGrade();
 	return (out);
 }

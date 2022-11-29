@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 18:36:39 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 19:22:04 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 02:02:52 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Intern::Intern()
 
 Intern& Intern::operator= (const Intern& intern)
 {
+    (void)intern;
 	return (*this);
 }
 
@@ -35,13 +36,13 @@ Intern::~Intern()
  Form*   Intern::makeForm(std::string name, std::string target)
  {
     Form *FormObjects[3];
-    std::string objcts[3] = {"Shrubbery creation", "robotomy request", "presidential"};
+    std::string objcts[3] = {"Shrubbery creation", "robotomy request", "presidential pardon"};
     int i = 0;
     int j = 0;
     
     FormObjects[0] = new ShrubberyCreationForm(target);
     FormObjects[1] = new RobotomyRequestForm(target);
-    FormObjects[2] = new PresidentialForm(target);
+    FormObjects[2] = new PresidentialPardonForm(target);
     
     while (i < 3)
     {
@@ -58,7 +59,8 @@ Intern::~Intern()
             delete FormObjects[j];
         j++;
     }
-    return (FormObjects[i]);
-    std::cout << "The name is not valid" << std::endl;
+    if (i < 3)
+        return (FormObjects[i]);
+    std::cout << name << " is not a valid name" << std::endl;
     return (NULL);
  }

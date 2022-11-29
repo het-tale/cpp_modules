@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:21:43 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 19:17:29 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 02:06:47 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ int	main( void )
 	try
 	{
 		Intern inter;
-		Form *rrf;
+		Form* rrf;
 
-		rrf = inter.makeForm("robotomy request", "Bender");
-		
+		//rrf = inter.makeForm("robotomy request", "Bender");
+		// rrf = inter.makeForm("Shrubbery creation", "Home");
+		rrf = inter.makeForm("presidential pardon", "hasnaa");
+		//rrf = inter.makeForm("Something", "hasnaa");
 	}
 	catch (std::exception& e)
 	{
