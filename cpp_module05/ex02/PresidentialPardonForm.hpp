@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 18:18:16 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 18:20:20 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:15:37 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class PresidentialPardonForm : public Form
         PresidentialPardonForm(const PresidentialPardonForm& president);
         PresidentialPardonForm& operator= (const PresidentialPardonForm& president);
         ~PresidentialPardonForm();
+        std::string getTarget( void ) const;
+        void    setTarget(std::string target);
 		void    execute(Bureaucrat const & executor) const;
 };
 #endif

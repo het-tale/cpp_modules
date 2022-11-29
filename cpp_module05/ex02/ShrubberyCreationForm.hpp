@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 14:53:44 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 17:50:35 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 00:17:39 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class ShrubberyCreationForm : public Form
         ShrubberyCreationForm(const ShrubberyCreationForm& form);
         ShrubberyCreationForm& operator= (const ShrubberyCreationForm& form);
         ~ShrubberyCreationForm();
+        std::string getTarget( void ) const;
+        void    setTarget(std::string target);
 		void    execute(Bureaucrat const & executor) const;
 };
 #endif

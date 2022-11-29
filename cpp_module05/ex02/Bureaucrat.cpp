@@ -6,13 +6,13 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:43:32 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 17:46:27 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 00:30:51 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("hasnaa")
+Bureaucrat::Bureaucrat() : _name("DEFAULT")
 {
 	std::cout << "Bureaucrat's default constructor called\n";
 	this->_grade = 150;
@@ -46,6 +46,11 @@ Bureaucrat::~Bureaucrat()
 int	Bureaucrat::getGrade( void ) const
 {
 	return (this->_grade);
+}
+
+void	Bureaucrat::setGrade(int grade)
+{
+	this->_grade = grade;
 }
 
 std::string Bureaucrat::getName( void ) const

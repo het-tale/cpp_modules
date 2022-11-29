@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 18:18:06 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 18:23:26 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:17:38 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator= (const PresidentialPar
 	return (*this);
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& president) : Form()
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& president) : Form(president.getName(), president.getSignedGrade(), president.getExecutedGrade())
 {
 	*this = president;
 }
@@ -37,6 +37,16 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& pre
 PresidentialPardonForm::~PresidentialPardonForm()
 {
 	std::cout << this->getName() << " has been destroyed\n";
+}
+
+std::string PresidentialPardonForm::getTarget( void ) const
+{
+	return (this->_target);
+}
+
+void    PresidentialPardonForm::setTarget(std::string target)
+{
+	this->_target = target;
 }
 
 void	PresidentialPardonForm::execute(Bureaucrat const & executor) const

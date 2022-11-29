@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 18:01:24 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 18:16:29 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:13:14 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator= (const RobotomyRequestForm& 
 	return (*this);
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& robot) : Form()
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& robot) : Form(robot.getName(), robot.getSignedGrade(), robot.getExecutedGrade())
 {
 	*this = robot;
 }
@@ -37,6 +37,16 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& robot) : For
 RobotomyRequestForm::~RobotomyRequestForm()
 {
 	std::cout << this->getName() << " has been destroyed\n";
+}
+
+std::string RobotomyRequestForm::getTarget( void ) const
+{
+	return (this->_target);
+}
+
+void    RobotomyRequestForm::setTarget(std::string target)
+{
+	this->_target = target;
 }
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const

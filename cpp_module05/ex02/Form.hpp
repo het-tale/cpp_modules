@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:09:41 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 16:54:28 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/28 23:56:29 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class Form
             public:
                 const char*   what() const throw();
         };
-        virtual void    execute(Bureaucrat const & executor) const;
+        virtual void    execute(Bureaucrat const & executor) const = 0;
 };
 std::ostream& operator<< (std::ostream& out,const Form& form);
 #endif

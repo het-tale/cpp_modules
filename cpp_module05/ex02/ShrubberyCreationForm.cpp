@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 15:01:24 by het-tale          #+#    #+#             */
-/*   Updated: 2022/11/28 17:55:27 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/11/29 00:43:19 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator= (const ShrubberyCreation
 	return (*this);
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& shrubbery) : Form()
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& shrubbery) : Form(shrubbery.getName(), shrubbery.getSignedGrade(), shrubbery.getExecutedGrade())
 {
 	*this = shrubbery;
 }
@@ -39,6 +39,16 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	std::cout << this->getName() << " has been destroyed\n";
 }
 
+std::string ShrubberyCreationForm::getTarget( void ) const
+{
+	return (this->_target);
+}
+
+void    ShrubberyCreationForm::setTarget(std::string target)
+{
+	this->_target = target;
+}
+ 
 void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	if (!this->getSigned() || executor.getGrade() > this->getExecutedGrade())
@@ -53,9 +63,9 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		file << "              /|\\               " << std::endl;
 		file << "             //|\\\\             " << std::endl;
 		file << "            ///|\\\\\\           " << std::endl;
-		file << "           ////|\\\\\\\\         " << std::endl;
-		file << "          /////|\\\\\\\\\\       " << std::endl;
+		file << "           /// | \\\\\\           " << std::endl;
 		file << "          0 0 ||| 0 0            " << std::endl;
 		file << "          ___ ||| ___            " << std::endl;
 	}
+	file.close();
 }
