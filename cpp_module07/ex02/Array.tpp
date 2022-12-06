@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 02:50:12 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/04 14:30:05 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/07 00:18:08 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 template <typename T>
 Array<T>::Array()
 {
-    this->arr = NULL;//to edit
-    this->size = 0;
+    this->arr = NULL;
+    this->_size = 0;
 }
 
 template <typename T>
 Array<T>::Array(unsigned int n)
 {
-    this->size = n;
+    this->_size = n;
     if (n <= 0)
         this->arr = NULL;
     else
@@ -32,22 +32,23 @@ Array<T>::Array(unsigned int n)
 template <typename T>
 Array<T>::Array(const Array& array)
 {
-    this->size = 0;
+    this->_size = 0;
     *this = array;
 }
 
 template <typename T>
-Array&  Array<T>::operator= (const Array& array)
+Array<T>&  Array<T>::operator= (const Array& array)
 {
     if (this == &array)
         return (*this);
-    if (this->size > 0)
+    if (this->_size > 0)
         delete [] this->arr;
-    this->size = 0;
-    while (this->size < array.size)
+    this->_size = 0;
+    this->arr = new T[array._size];
+    while (this->_size < array._size)
     {
-        this->arr[this->size] = array->arr[this->size];
-        this->size++;
+        this->arr[this->_size] = array.arr[this->_size];
+        this->_size++;
     }
     return (*this);
 }
@@ -55,7 +56,7 @@ Array&  Array<T>::operator= (const Array& array)
 template <typename T>
 T&  Array<T>::operator[] (int index)
 {
-    if (index < 0 || index >= (int)this->size)
+    if (index < 0 || index >= (int)this->_size)
         throw OutOfRangeException();
     return (this->arr[index]);
 }
@@ -63,14 +64,14 @@ T&  Array<T>::operator[] (int index)
 template <typename T>
 Array<T>::~Array()
 {
-    if (this->size > 0)
+    if (this->_size > 0)
         delete [] this->arr;
 }
 
 template <typename T>
 unsigned int Array<T>::size() const
 {
-    return (this->size);
+    return (this->_size);
 }
 
 template <typename T>

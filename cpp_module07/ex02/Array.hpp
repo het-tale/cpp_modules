@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 02:33:53 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/04 14:27:26 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/07 00:21:29 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ class Array
 {
     private:
         T	*arr;
-		unsigned int size;
+		unsigned int _size;
 	public:
 		Array();
 		Array(unsigned int n);
 		Array(const Array& array);
-		Array& operator= (const Array& array);
+		Array<T>& operator= (const Array& array);
 		T& operator[] (int index);
 		~Array();
 		unsigned int size() const;
