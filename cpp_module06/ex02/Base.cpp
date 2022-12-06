@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 08:55:03 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/06 02:24:22 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/06 02:46:31 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,21 +61,24 @@ void identify(Base& p)
 {
     try
     {
-        (void)dynamic_cast<A&>(p);
+        A& a = dynamic_cast<A&>(p);
+        (void)a;
         std::cout << "The actual type is: A" << std::endl;
     }
     catch(std::exception& e)
     {
         try
         {
-            (void)dynamic_cast<B&>(p);
+            B& b = dynamic_cast<B&>(p);
+            (void)b;
             std::cout << "The actual type is: B" << std::endl;
         }
         catch(std::exception& e)
         {
             try
             {
-                (void)dynamic_cast<C&>(p);
+                C& c = dynamic_cast<C&>(p);
+                (void)c;
                 std::cout << "The actual type is: C" << std::endl;
             }
             catch(std::exception& e)
