@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 09:34:54 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/05 09:50:14 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/06 02:31:17 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ int main()
 {
     Base *p;
 
-    p = generate;
+    p = generate();
     identify(p);
     identify(*p);
+    delete p;
     return (0);
 }
