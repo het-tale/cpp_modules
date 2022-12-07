@@ -6,20 +6,20 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 02:06:21 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/04 02:28:42 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/07 01:43:34 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 
-int addOne(int a)
+void    addOne(int const & a)
 {
-    return (++a);
+   std::cout << a * 2 << " ";
 }
 
-char    CapiChar(char c)
+void    CapiChar(char const & c)
 {
-    return ((char)toupper(c));
+    std::cout << c;
 }
 
 int main()
@@ -29,17 +29,15 @@ int main()
 
     std::cout << "------------Before iter------------\n";
     for (int i = 0; i < 5; i++)
-        std::cout << arr[i] << std::endl;
+        std::cout << arr[i] << " ";
     
     for (int i = 0; i < 6; i++)
-        std::cout << carr[i] << std::endl;
+        std::cout << carr[i] << " ";
+    std::cout << std::endl;
     std::cout << "------------After iter------------\n";
     ::iter(arr, 5, addOne);
-    for (int i = 0; i < 5; i++)
-        std::cout << arr[i] << std::endl;
 
     ::iter(carr, 6, CapiChar);
-    for (int i = 0; i < 6; i++)
-        std::cout << carr[i] << std::endl;
+    std::cout << std::endl;
     return (0);
 }
