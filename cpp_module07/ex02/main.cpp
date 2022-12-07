@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 13:20:21 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/07 00:21:59 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/07 02:09:43 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int main(int, char**)
         numbers[i] = value;
         mirror[i] = value;
     }
-    //printf("----%d---\n", numbers[637]);
     //SCOPE
     {
         Array<int> tmp = numbers;
