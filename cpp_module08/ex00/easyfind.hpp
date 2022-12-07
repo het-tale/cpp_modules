@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:46:42 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/07 18:06:42 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:43:09 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 template <typename T>
 void    easyfind(T container, int find)
 {
-    int i;
+    unsigned int i;
 
     i = 0;
     while (i < container.size())
