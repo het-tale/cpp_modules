@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:46:42 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/08 19:41:51 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/08 22:12:37 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,12 @@
 #include <algorithm>
 #include <vector>
 #include <list>
-#define ERR_VAL -1
 
 class NotFoundException: public std::exception
 {
     public:
         const char* what() const throw();
-}
+};
 
 const char* NotFoundException::what() const throw()
 {
@@ -43,4 +42,3 @@ int easyfind(T container, int val)
     throw NotFoundException();
 }
 #endif
-//https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
