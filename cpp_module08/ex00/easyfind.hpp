@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:46:42 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/08 01:32:08 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/08 19:41:51 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,26 @@
 #include <list>
 #define ERR_VAL -1
 
-template <typename T>
-int easyfind(T container, int find)
+class NotFoundException: public std::exception
 {
-    unsigned int i;
+    public:
+        const char* what() const throw();
+}
 
-    i = 0;
-    while (i < container.size())
-    {
-        if (container.at(i) == find)
-        {
-            std::cout << "Found at index " << i << std::endl;
-            return (i);
-        }
-        i++;
-    }
-    std::cout << "No match for " << find << " Found" << std::endl;
-    return (ERR_VAL);
+const char* NotFoundException::what() const throw()
+{
+    return "Value not found";
+}
+
+template <typename T>
+int easyfind(T container, int val)
+{
+    typename T::iterator it;
+    it = std::find(container.begin(), container.end(), val);
+    unsigned int d = std::distance(container.begin(), it);
+    if (it != container.end())
+        return (d);
+    throw NotFoundException();
 }
 #endif
+//https://www.geeksforgeeks.org/the-c-standard-template-library-stl/

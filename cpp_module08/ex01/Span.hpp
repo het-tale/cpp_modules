@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 22:49:55 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/08 01:39:29 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/08 19:39:48 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 #include <algorithm>
 #include <vector>
 #include <list>
-#include <functional>
 
 class Span
 {
@@ -30,8 +29,8 @@ class Span
 	public:
 		Span();
 		Span(unsigned int N);
-		Span(const Span& span);
-		Span& operator= (const Span& span);
+		Span(const Span& copy);
+		Span& operator= (const Span& copy);
 		~Span();
 		void addNumber(int N);
 		int	shortestSpan();
