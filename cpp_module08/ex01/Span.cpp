@@ -6,7 +6,7 @@
 /*   By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 23:24:56 by het-tale          #+#    #+#             */
-/*   Updated: 2022/12/08 19:12:22 by het-tale         ###   ########.fr       */
+/*   Updated: 2022/12/08 23:56:48 by het-tale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Span::Span()
 {
 	this->N = 0;
-	span.size() = 0;
 }
 
 Span::Span(unsigned int N)
@@ -25,14 +24,14 @@ Span::Span(unsigned int N)
 
 Span::Span(const Span& copy)
 {
-	*this = span;
+	*this = copy;
 }
 
 Span&	Span::operator= (const Span& copy)
 {
-	if (this = &span)
+	if (this == &copy)
 		return (*this);
-	this->N = span.N;
+	this->N = copy.N;
 	this->span.clear();
 	this->span.assign(copy.span.begin(), copy.span.end());
 	return (*this);
@@ -43,11 +42,18 @@ Span::~Span()
 	this->span.clear();
 }
 
-Span::addNumber(int N)
+void	Span::addNumber(int number)
 {
-	if (N > this->N)
+	if (this->span.size() >= this->N)
 		throw OutOfRangeException();
-	this->span.push_back(N);
+	this->span.push_back(number);
+}
+
+void	Span::ImrovedaddNumber(std::vector<int> copy)
+{
+	if (copy.size() >= this->N)
+		throw OutOfRangeException();
+	this->span.insert(this->span.end(),copy.begin(), copy.end());
 }
 
 int Span::shortestSpan()
@@ -77,6 +83,11 @@ int Span::longestSpan()
 	std::sort(copy.begin(), copy.end());
 	longest = copy.at(copy.size() - 1) - copy.at(0);
 	return (longest);
+}
+
+std::vector<int> Span::getSpan(void) const
+{
+	return (this->span);
 }
 
 const char* Span::OutOfRangeException::what() const throw()

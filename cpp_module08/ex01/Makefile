@@ -6,11 +6,11 @@
 #    By: het-tale <het-tale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 10:10:12 by het-tale          #+#    #+#              #
-#    Updated: 2022/12/07 22:49:16 by het-tale         ###   ########.fr        #
+#    Updated: 2022/12/08 23:24:24 by het-tale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    =    span
+NAME    =    ex01
 
 SRCS    =    main.cpp span.cpp
 
